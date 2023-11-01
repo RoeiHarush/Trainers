@@ -24,6 +24,10 @@ public class Session
     @JoinColumn(name = "trainer_id")
     private Trainer trainer;
 
-    private LocalDateTime sessionDateTime;
+
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
     private String details;
+
+
 }

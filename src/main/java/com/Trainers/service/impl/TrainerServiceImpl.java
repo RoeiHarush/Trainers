@@ -107,7 +107,6 @@ public class TrainerServiceImpl implements TrainerService
 
         if (optionalTrainer.isPresent()) {
             Trainer trainer = optionalTrainer.get();
-            // Add the session to the trainer's sessions list
             trainer.getSessions().add(session);
 
             trainerRepo.save(trainer);

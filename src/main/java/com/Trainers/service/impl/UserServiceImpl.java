@@ -23,7 +23,6 @@ public class UserServiceImpl implements UserService {
     private final Session_Repo sessionRepo;
 
 
-
     @Autowired
     public UserServiceImpl(User_Repo userRepo, Booking_Repo bookingRepo, Session_Repo sessionRepo) {
         this.userRepo = userRepo;
@@ -112,4 +111,4 @@ public class UserServiceImpl implements UserService {
             throw new EntityNotFoundException("User or Session not found with provided IDs");
         }
     }
-    }
+}
