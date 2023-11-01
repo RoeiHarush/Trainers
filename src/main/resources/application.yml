@@ -1,0 +1,11 @@
+server:
+  port: 4000
+version: '3'
+spring :
+  datasource :
+    url : jdbc:postgresql://localhost:5432/Trainers
+    username: postgres
+    password : roei
+  jpa :
+    database-platform : org.hibernate.dialect.PostgreSQLDialect
+
