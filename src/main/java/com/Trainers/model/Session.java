@@ -1,5 +1,6 @@
 package com.Trainers.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ public class Session
     private Long id;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "trainer_id")
     private Trainer trainer;
 
@@ -29,5 +31,9 @@ public class Session
     private LocalDateTime endTime;
     private String details;
 
-
+    public Session(Trainer trainer, LocalDateTime startTime, LocalDateTime endTime) {
+        this.trainer = trainer;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
 }

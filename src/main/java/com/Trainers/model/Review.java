@@ -27,5 +27,6 @@ public class Review
     private Trainer trainer;
 
     private String comment;
+
     private int rating;
 }
